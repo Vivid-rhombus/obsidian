@@ -1,0 +1,6 @@
+- Rebase on to BenB branch to connect to navigate to user
+- To avoid the navbar: 
+	- Margin?
+- FutureBuilder?
+- Animations?
+- 
