@@ -65,12 +65,11 @@ Polls:
 	},
 	"votes": subcollection({"userId": votedOption}),
 	"backgroundUrl": "string",
-	"debates": [debateId],
+	"debates": [{debateId: playersELOSum<number>}],
 	"expiryDate": date,
 	"createdAt": date
 }
 ```
-
 Debate
 ```JSON
 {
@@ -81,15 +80,17 @@ Debate
 			"votes": number,
 			"chosenOption": "string",
 			"gainedELO": number,
-			"userImageUrl": "string"
+			"userImageUrl": "string",
+			"name": "string"
 		}
 	},
 	"jurors": {
 		"userId": {
+			"chosenOption": string
 			"chosenUser": userId,
 		}
 	},
-	"turns": [{"userId": userId, "message": "string"}],
+	"turns": [{"userId": userId, "message": "string", deadline: timestamp }],
 	"turnIndex": number,
 	"winner": "string",
 	"mvp": userId
